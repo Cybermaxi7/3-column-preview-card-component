@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-primary1: hsl(31, 77%, 52%);
+  --color-primary2: hsl(184, 100%, 22%);
+  --color-primary3: hsl(179, 100%, 13%);
+  --color-paragraph: hsl(179, 100%, 13%);
+  --color-bg: hsl(0, 0%, 95%);
+}
+
+html {
+  font-size: 66.67%;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: "Big Shoulders Display", cursive;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.container {
+  width: 65rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+.row {
+  display: flex;
+  width: 100%;
+  color: var(--color-bg);
+}
+.col {
+  width: 33.33%;
+  padding: 3rem;
+}
+.col-1 {
+  background-color: var(--color-primary1);
+}
+.col-1 a {
+  color: var(--color-primary1);
+  transition: all 0.3s;
+}
+.col-1 a:hover {
+  background-color: var(--color-primary1);
+  border: 2px solid var(--color-bg);
+  color: var(--color-bg);
+}
+.col-2 a {
+  color: var(--color-primary2);
+  transition: all 0.3s;
+}
+.col-2 a:hover {
+  background-color: var(--color-primary2);
+  border: 2px solid var(--color-bg);
+  color: var(--color-bg);
+}
+.col-3 a {
+  color: var(--color-primary3);
+  transition: all 0.3s;
+}
+.col-3 a:hover {
+  background-color: var(--color-primary3);
+  border: 2px solid var(--color-bg);
+  color: var(--color-bg);
+}
+.col-2 {
+  background-color: var(--color-primary2);
+}
+.col-3 {
+  background-color: var(--color-primary3);
+}
+.col img {
+  width: 3rem;
+  margin-bottom: 2rem;
+}
+.box h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.box p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 7rem;
+  width: 90%;
+}
+
+.col a {
+  text-decoration: none;
+  background-color: var(--color-bg);
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+  margin-left: 1rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 60%;
+  }
+  .container {
+    width: 55rem;
+  }
+
+  .col a {
+    margin-left: 0;
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .container {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    width: 90%;
+    margin: 0 auto;
+  }
+  .row {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+  }
+  .col {
+    width: 90%;
+  }
+  .col img {
+    width: 5rem;
+  }
+  .box h1 {
+    font-size: 3rem;
+  }
+  .box p {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    margin-bottom: 4rem;
+  }
+  .col a {
+    padding: 1.4rem 4rem;
+    font-size: 1.6rem;
+  }
+}
